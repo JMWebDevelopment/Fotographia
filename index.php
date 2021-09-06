@@ -1,50 +1,45 @@
 <?php
 /**
-* Index.php
-*
-* @package Fotographia
-* @author  Jacob Martella
-* @version  1.5
-*/
-/**
-* To change the archive pages, edit the archives.php template. 
-*/
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package wp_rig
+ */
+
+namespace WP_Rig\WP_Rig;
+
+get_header();
+
+wp_rig()->print_styles( 'wp-rig-content' );
+wp_rig()->load_dark_styles();
+
 ?>
-<?php get_header(); ?>
-<div id="content" class="archive">
-	<?php if ( have_posts() ) : the_post(); ?>
-	<div class="archive-page-header">
-		<h1 class="archive-page-title"><?php the_archive_title();?></h1>
-	</div>
-	<?php endif; ?>
-	<?php rewind_posts(); ?>
-	<div id="inner-content" class="row index">
-		<main id="main" class="large-8 medium-12 columns first" role="main">
-			<?php $count = 1; if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php if ( $count == 1 or $count == 2 ) { ?><div class="row"><?php } ?>
-				<?php if ( $count == 1 ) { $class = 'large-12 medium-12 columns'; } else { $class = 'large-6 medium-6 columns'; } ?>
-				<div class="<?php echo esc_attr( $class ); ?>">
-                    <article <?php post_class( array( 'story' ) ); ?>>
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="story-front">
-                                <?php the_post_thumbnail( 'fotographia-home' ); ?>
-                            </div>
-                            <div class="story-back">
-                                <div class="photo-wrap">
-                                    <?php fotographia_story_slideshow( get_the_ID() ); ?>
-                                </div>
-                                <span class="title-area">
-                                    <?php if ( ! is_category() ) { ?><h5 class="category"><?php $cat = get_the_category(); echo esc_html( $cat[0]->name ); ?></h5><?php } ?>
-                                    <h3 class="title"><?php the_title(); ?></h3>
-                                </span>
-                            </div>
-                        </a>
-                    </article>
-				</div>
-				<?php if ( $count == 1 or $count == 3 ) { ?></div><?php } ?>
-				<?php $count += 1; if ( $count == 4 ) { $count = 1; } endwhile; if ( $count == 3 ) { ?> </div> <?php } the_posts_pagination(); endif; ?>
-	</main> <!-- end #main -->
-	<?php get_sidebar(); ?>
-</div> <!-- end #inner-content -->
-</div> <!-- end #content -->
-<?php get_footer(); ?>
+	<main id="primary" class="site-main">
+		<?php
+		if ( have_posts() ) {
+
+			get_template_part( 'template-parts/content/page_header' );
+
+			while ( have_posts() ) {
+				the_post();
+
+				get_template_part( 'template-parts/content/entry', get_post_type() );
+			}
+
+			if ( ! is_singular() ) {
+				get_template_part( 'template-parts/content/pagination' );
+			}
+		} else {
+			get_template_part( 'template-parts/content/error' );
+		}
+		?>
+	</main><!-- #primary -->
+<?php
+get_sidebar();
+get_footer();

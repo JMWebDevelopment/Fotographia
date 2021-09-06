@@ -1,0 +1,16 @@
+/* stylelint-disable */
+@define-mixin latoFont $fontSize, $fontWeight, $color, $text-transform: none {
+	font-family: 'Lato', sans-serif;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	color: $color;
+	text-transform: $text-transform;
+}
+@define-mixin playfair $fontSize, $fontWeight, $color, $text-transform: none {
+	font-family: 'Playfair Display', serif;
+	font-size: $fontSize;
+	font-weight: $fontWeight;
+	color: $color;
+	text-transform: $text-transform;
+}
+/* stylelint-enable */

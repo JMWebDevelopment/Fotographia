@@ -1,229 +1,522 @@
+# Copyright (C) 2021 WP Rig
+# This file is distributed under the same license as the WP Rig package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Fotographia\n"
-"POT-Creation-Date: 2016-03-12 13:47-0600\n"
-"PO-Revision-Date: 2016-03-12 13:49-0600\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ru_RU\n"
+"Project-Id-Version: WP Rig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-WPHeader: style.css\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Report-Msgid-Bugs-To: WP Rig\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: ru_RU\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: 404.php:13
-msgid "404 - Article Not Found"
-msgstr "Ошибка 404 - Статья не найдена"
-
-#: 404.php:14
-msgid "The article you were looking for was not found."
-msgstr "Статья, которую вы ищете, не найден."
-
-#: comments.php:22
-#, php-format
+#. translators: 1: comment count number, 2: title.
+#: comments.php:44
 msgctxt "comments title"
-msgid "One comment on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
-msgstr[0] "Один комментарий к &ldquo;%2$s&rdquo;"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s комментарий к &ldquo;%2$s&rdquo;"
 msgstr[1] ""
 msgstr[2] ""
 
-#: comments.php:30 comments.php:44
-msgid "Comment navigation"
-msgstr "Навигация по комментариям"
+#: comments.php:38
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Один комментарий о &ldquo;%1$s&rdquo;"
 
-#: comments.php:33 comments.php:46
-msgid "Older Comments"
-msgstr "Старые комментарии"
-
-#: comments.php:34 comments.php:47
-msgid "Newer Comments"
-msgstr "Новые комментарии"
-
-#: comments.php:56
+#: comments.php:60
 msgid "Comments are closed."
-msgstr "Комментарии закрыты"
+msgstr "Комментарии закрыты."
 
-#. Theme Name of the plugin/theme
-#: footer.php:13
+#: header.php:36
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+#: sidebar.php:20
+msgid "Asides"
+msgstr "Заметки"
+
+#: sidebar.php:26, template-parts/single/entry-bio.php:27
+msgid "About "
+msgstr "Об "
+
+#. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
+#: inc/back-compat.php:25
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s and PHP version %2$s. You "
+"are running versions %3$s and %3$s respectively. Please update and try again."
+msgstr ""
+"WP Rig требует как минимум WordPress версии %1$s и PHP версии %2$s. Вы "
+"используете версии %3$s и %3$s соответственно. Пожалуйста, обновите версию и "
+"попробуйте снова."
+
+#. translators: 1: required WP version number, 2: available WP version number
+#: inc/back-compat.php:30
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s. You are running version "
+"%2$s. Please update and try again."
+msgstr ""
+"WP Rig требует как минимум WordPress версии %1$s. Вы используете версию "
+"%2$s. Пожалуйста, обновите ее и попробуйте снова."
+
+#. translators: 1: required PHP version number, 2: available PHP version number
+#: inc/back-compat.php:35
+#, fuzzy
+msgid ""
+"WP Rig requires at least PHP version %1$s. You are running version %2$s. "
+"Please update and try again."
+msgstr ""
+"Для работы WP Rig требуется PHP версии не ниже %1$s. Вы используете версию "
+"%2$s. Пожалуйста, обновите ее и попробуйте снова."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Template_Tags.php:54
+msgid ""
+"The theme templating component %1$s does not implement the %2$s interface."
+msgstr "Компонент темизации %1$s не реализует интерфейс %2$s."
+
+#. translators: %s: template tag name
+#: inc/Template_Tags.php:81
+msgid "The template tag %s does not exist."
+msgstr "Тег шаблона %s не существует."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:110
+msgid ""
+"The template tag method %1$s registered by theme component %2$s must either "
+"be a callable or an array."
+msgstr ""
+"Метод тега шаблона %1$s зарегистрированный компонентом темы %2$s должен быть "
+"либо вызываемым, либо массивом."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:121
+msgid ""
+"The template tag method %1$s registered by theme component %2$s conflicts "
+"with an already registered template tag of the same name."
+msgstr ""
+"Метод тега шаблона %1$s, зарегистрированный компонентом темы %2$s, "
+"конфликтует с уже зарегистрированным тегом шаблона с тем же именем."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Theme.php:57
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr "Компонент темы %1$s не реализует интерфейс %2$s."
+
+#. translators: %s: slug
+#: inc/Theme.php:120
+msgid "No theme component with the slug %s exists."
+msgstr "Не существует компонента темы по ссылке %s."
+
+#: inc/Accessibility/Component.php:69
+msgid "Expand child menu"
+msgstr "Развернуть дочернее меню"
+
+#: inc/Accessibility/Component.php:70
+msgid "Collapse child menu"
+msgstr "Свернуть дочернее меню"
+
+#: inc/Comments/Component.php:149
+msgid "New comment(s)"
+msgstr "Новый комментарий (и)"
+
+#: inc/Customizer/Component.php:53
+#, fuzzy
+msgid "Fotographia Settings"
+msgstr "Настройки Fotographia"
+
+#: inc/Customizer/Component.php:54
+#, fuzzy
+msgid "These are the Fotographia theme options."
+msgstr "Это варианты темы Fotographia."
+
+#: inc/Customizer/Component.php:60
+msgid "Light"
+msgstr "Светлый"
+
+#: inc/Customizer/Component.php:61
+msgid "Dark"
+msgstr "Темный"
+
+#: inc/Customizer/Component.php:75
+msgid "Color Scheme"
+msgstr "Цветовая схема"
+
+#: inc/Customizer/Component.php:84
+msgid "None"
+msgstr "Нет"
+
+#: inc/Customizer/Component.php:101
+msgid "Home Featured Category"
+msgstr "Избранная категория"
+
+#: inc/Customizer/Component.php:120
+#, fuzzy
+msgid "Number of Stories on the Homepage."
+msgstr "Количество рассказов на домашней странице."
+
+#: inc/Customizer/Component.php:138
+#, fuzzy
+msgid "Display the Author's Bio"
+msgstr "Отображение биографии автора"
+
+#: inc/Customizer/Component.php:156
+msgid "Facebook Link"
+msgstr "Ссылка на Facebook"
+
+#: inc/Customizer/Component.php:174
+msgid "Twitter Link"
+msgstr "Ссылка на Twitter"
+
+#: inc/Customizer/Component.php:192
+msgid "YouTube Link"
+msgstr "Ссылка На YouTube "
+
+#: inc/Customizer/Component.php:210
+msgid "Tumblr Link"
+msgstr "Ссылка на Tumblr"
+
+#: inc/Customizer/Component.php:228
+msgid "Instagram Link"
+msgstr "Ссылка на Instagram"
+
+#: inc/Customizer/Component.php:246
+#, fuzzy
+msgid "RSS Feed Link"
+msgstr "Ссылка на RSS-канал"
+
+#: inc/Editor/Component.php:65
+msgid "Primary"
+msgstr "Основной"
+
+#: inc/Editor/Component.php:70
+msgid "Secondary"
+msgstr "Вторичный"
+
+#: inc/Editor/Component.php:75
+msgid "Red"
+msgstr "Красный"
+
+#: inc/Editor/Component.php:80
+msgid "Green"
+msgstr "Зеленый"
+
+#: inc/Editor/Component.php:85
+msgid "Blue"
+msgstr "Синий"
+
+#: inc/Editor/Component.php:90
+msgid "Yellow"
+msgstr "Желтый"
+
+#: inc/Editor/Component.php:95
+msgid "Black"
+msgstr "Черный"
+
+#: inc/Editor/Component.php:100
+msgid "Grey"
+msgstr "Серый"
+
+#: inc/Editor/Component.php:105
+msgid "White"
+msgstr "Белый"
+
+#: inc/Editor/Component.php:110
+#, fuzzy
+msgid "Dusty daylight"
+msgstr "Пыльный дневной свет"
+
+#: inc/Editor/Component.php:115
+#, fuzzy
+msgid "Dusty sun"
+msgstr "Пыльное солнце"
+
+#: inc/Editor/Component.php:132
+msgid "Small"
+msgstr "Маленький"
+
+#: inc/Editor/Component.php:133
+msgid "S"
+msgstr "S"
+
+#: inc/Editor/Component.php:138
+msgid "Medium"
+msgstr "Средний"
+
+#: inc/Editor/Component.php:139
+msgid "M"
+msgstr "M"
+
+#: inc/Editor/Component.php:144
+msgid "Large"
+msgstr "Большой"
+
+#: inc/Editor/Component.php:145
+msgid "L"
+msgstr "L"
+
+#: inc/Editor/Component.php:150
+msgid "Larger"
+msgstr "Больше"
+
+#: inc/Editor/Component.php:151
+msgid "XL"
+msgstr "XL"
+
+#: inc/Nav_Menus/Component.php:68
+msgid "Main Navigation"
+msgstr "Главная навигация"
+
+#: inc/Sidebars/Component.php:69
+msgid "Sidebar"
+msgstr "Боковая панель"
+
+#: inc/Sidebars/Component.php:71
+msgid "Add widgets here."
+msgstr "Добавьте сюда виджеты."
+
+#: inc/Social_Media/Component.php:62, inc/Social_Media/Component.php:74
+msgid "Facebook Profile"
+msgstr "Профиль в Facebook"
+
+#: inc/Social_Media/Component.php:65
+msgid "Twitter Profile"
+msgstr "Профиль Twitter"
+
+#: inc/Social_Media/Component.php:68
+msgid "YouTube Channel"
+msgstr "YouTube канал"
+
+#: inc/Social_Media/Component.php:71
+msgid "Tumblr Blog"
+msgstr "Блог Tumblr"
+
+#: inc/Social_Media/Component.php:79, inc/Social_Media/Component.php:77
+msgid "RSS Feed"
+msgstr "RSS лента"
+
+#. translators: %s: stylesheet handle
+#: inc/Styles/Component.php:238
+msgid "Invalid theme stylesheet handle: %s"
+msgstr "Ошибки в таблице стилей темы: %s"
+
+#: template-parts/content/entry-attachment.php:33,
+#: template-parts/content/entry.php:32
+msgid "Previous:"
+msgstr "Предыдущая:"
+
+#: template-parts/content/entry-attachment.php:43,
+#: template-parts/content/entry.php:33
+msgid "Next:"
+msgstr "Следующая:"
+
+#: template-parts/content/entry-attachment.php:49
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#. translators: %s: post title
+#: template-parts/content/entry_actions.php:21
+#, fuzzy
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Оставить комментарий<span class=\"screen-reader-text\"> на %s</span>"
+
+#. translators: %s: post title
+#: template-parts/content/entry_actions.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Редактировать <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/entry_content.php:18
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Продолжить чтение<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content/entry_content.php:31
+msgid "Pages:"
+msgstr "Страницы:"
+
+#. translators: %s: post date
+#: template-parts/content/entry_meta.php:63
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Опубликовано %s"
+
+#. translators: %s: post author
+#: template-parts/content/entry_meta.php:76
+msgctxt "post author"
+msgid "By %s"
+msgstr "От %s"
+
+#. translators: %s: post author
+#: template-parts/content/entry_meta.php:79
+msgctxt "post author"
+msgid "by %s"
+msgstr "от %s"
+
+#. translators: %s: post parent title
+#: template-parts/content/entry_meta.php:95
+msgctxt "post parent"
+msgid "In %s"
+msgstr "В %s"
+
+#. translators: %s: post parent title
+#: template-parts/content/entry_meta.php:98
+msgctxt "post parent"
+msgid "in %s"
+msgstr "в %s"
+
+#. translators: separator between taxonomy terms
+#: template-parts/content/entry_taxonomies.php:24
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: %s: list of taxonomy terms
+#: template-parts/content/entry_taxonomies.php:31
+msgid "Posted in %s"
+msgstr "Рубрика %s"
+
+#. translators: %s: list of taxonomy terms
+#: template-parts/content/entry_taxonomies.php:37
+msgid "Tagged %s"
+msgstr "Метки %s"
+
+#. translators: %s: taxonomy name
+#: template-parts/content/entry_taxonomies.php:44
+msgid "%s:"
+msgstr "%s:"
+
+#: template-parts/content/error-404.php:16
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Похоже, в этом месте ничего не было найдено. Возможно, попробуйте одну из "
+"ссылок ниже или поиск?"
+
+#: template-parts/content/error-404.php:27
+msgid "Most Used Categories"
+msgstr "Самые популярные категории"
+
+#. translators: %1$s: smiley
+#: template-parts/content/error-404.php:45
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Попробуйте посмотреть в ежемесячных архивах. %1$s"
+
+#: template-parts/content/error-500.php:14
+msgid "Oops! Something went wrong."
+msgstr "Ой! Что-то пошло не так."
+
+#: template-parts/content/error-offline.php:14
+msgid "Oops! It looks like you&#8217;re offline."
+msgstr "Ой! Похоже, что вы&#8217;re в автономном режиме."
+
+#: template-parts/content/error.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+
+#: template-parts/content/error.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, но ничто не соответствовало вашим условиям поиска. Пожалуйста, "
+"попытайтесь снова с другими ключевыми словами."
+
+#: template-parts/content/error.php:23
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать свой первый пост? <a href=\"%1$s\">Начните здесь</a>."
+
+#. translators: %s: search query
+#: template-parts/content/page_header.php:41
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: template-parts/content/page_header.php:22
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: template-parts/content/page_header.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Упс! Эта страница не найдена."
+
+#: template-parts/content/pagination.php:13
+msgctxt "previous set of search results"
+msgid "Previous"
+msgstr "Предыдущий"
+
+#: template-parts/content/pagination.php:14
+msgctxt "next set of search results"
+msgid "Next"
+msgstr "Следующий"
+
+#: template-parts/content/pagination.php:15
+msgid "Page navigation"
+msgstr "Навигация по страницам"
+
+#: template-parts/footer/info.php:25
+#, fuzzy
 msgid "Fotographia"
 msgstr "Fotographia"
 
-#: functions.php:132
-msgid "Top Menu"
-msgstr "Верхнее меню"
+#: template-parts/header/navigation.php:16
+msgid "Main menu"
+msgstr "Главное меню"
 
-#: functions.php:133
-msgid "Main Menu"
-msgstr "Основное меню"
+#: template-parts/header/navigation.php:39
+msgid "Open menu"
+msgstr "Открыть меню"
 
-#: functions.php:134
-msgid "Footer Links"
-msgstr "Ссылки в подвале"
+#: template-parts/header/navigation.php:49
+msgid "Menu"
+msgstr "Меню"
 
-#: functions.php:141
-msgid "Sidebar"
-msgstr "Боковая панель (сайдбар)"
-
-#: functions.php:142
-msgid "The first (primary) sidebar."
-msgstr "Первая (основная) боковая панель."
-
-#: functions.php:205 sidebar.php:15
-msgid "About "
-msgstr "О нас"
-
-#: functions.php:246
-msgid "First"
-msgstr "Первое"
-
-#: functions.php:263
-msgid "Last"
-msgstr "Последнее"
-
-#: functions.php:286
-msgid "g:ia, F jS, Y"
+#: template-parts/not-found/entry-content.php:14
+#, fuzzy
+msgid ""
+"Please use the search bar below to search for the content you're looking for."
 msgstr ""
+"Пожалуйста, воспользуйтесь строкой поиска ниже, чтобы найти нужный вам "
+"контент."
 
-#: functions.php:287
-msgid "(Edit)"
-msgstr "(Изменить)"
+#: template-parts/not-found/entry-header.php:13
+#, fuzzy
+msgid "404 - Article Not Found"
+msgstr "404 - Статья не найдена"
 
-#: functions.php:291
-msgid "Your comment is awaiting moderation."
-msgstr "Ваш комментарий ожидает проверки модератором."
+#: template-parts/not-found/entry-header.php:14
+#, fuzzy
+msgid "The article you were looking for was not found."
+msgstr "Статья, которую вы искали, не найдена."
 
-#: functions/theme-options.php:17
-msgid "Fotographia Settings"
-msgstr "Fotographia параметры"
-
-#: functions/theme-options.php:18
-msgid "These are the Fotographia theme options."
-msgstr "Это тема опции Fotographia."
-
-#: functions/theme-options.php:25
-msgid "None"
-msgstr "Ничего"
-
-#: functions/theme-options.php:42
-msgid "Home Slider Category"
-msgstr "Категория слайдера"
-
-#: functions/theme-options.php:61
-msgid "Number of Stories on the Homepage."
-msgstr "Количество этажей на главной странице."
-
-#: functions/theme-options.php:79
-msgid "Display the Author's Bio"
-msgstr "Отображение автора био"
-
-#: functions/theme-options.php:97
-msgid "Facebook Link"
-msgstr "Ссылка Facebook"
-
-#: functions/theme-options.php:115
-msgid "Twitter Link"
-msgstr "Ссылка Twitter"
-
-#: functions/theme-options.php:133
-msgid "Google+ Link"
-msgstr "Google+ ссылка"
-
-#: functions/theme-options.php:151
-msgid "YouTube Link"
-msgstr "Ссылка на YouTube"
-
-#: functions/theme-options.php:169
-msgid "Tumblr Link"
-msgstr "Ссылка Tumblr"
-
-#: functions/theme-options.php:187
-msgid "Instagram Link"
-msgstr "Ссылка Instagram"
-
-#: functions/theme-options.php:205
-msgid "RSS Feed Link"
-msgstr "Ссылку на ленту RSS"
-
-#: header.php:30 header.php:58
-msgid "Header Image"
-msgstr "Изображение шапки"
-
-#: header.php:71
-msgid "Navigation"
-msgstr "Навигация"
-
-#: header.php:86
-msgid "Social Media Links"
-msgstr "Ссылки на социальные сети"
-
-#: searchform.php:12
-msgctxt "label"
-msgid "Search for:"
-msgstr "Искать:"
-
-#: searchform.php:13
-msgctxt "input"
-msgid "Search..."
-msgstr "Поиск…"
-
-#: searchform.php:13
-msgctxt "title"
-msgid "Search for:"
-msgstr "Искать:"
-
-#: searchform.php:15
-msgctxt "submit"
-msgid "Search"
-msgstr "Поиск"
-
-#: sidebar.php:27
-msgid "Please activate some Widgets."
-msgstr "Пожалуйста, включите некоторые виджеты."
-
-#: single.php:18 single.php:24
-msgid "Written By: "
-msgstr "Автор: "
-
-#: single.php:36
+#: template-parts/single/entry-footer.php:13
 msgid "Tags:"
-msgstr "Тэги:"
+msgstr "Теги:"
 
-#. Theme URI of the plugin/theme
-msgid ""
-"http://www.jacobmartella.com/wordpress/wordpress-theme/fotographia-"
-"wordpress-theme"
-msgstr ""
+#: template-parts/single/entry-header.php:24
+#, fuzzy
+msgid "Written By: "
+msgstr "Written By"
 
-#. Description of the plugin/theme
-msgid ""
-"Fotographia is the perfect place to house your photo site. This theme is "
-"designed with photo stories and long-form stories in mind. It has great "
-"support for large, full-width photos to show off your photos in stunning "
-"detail. Fotographia is also responsive, so your readers can take your "
-"stories where ever they go with no effort from you."
-msgstr ""
-"Fotographia является идеальным местом для размещения вашего сайта фото. "
-"Эта тема разработана с фото рассказы и истории Лог формы в виду. Он имеет "
-"большую поддержку для крупных, полной ширины фотографии, чтобы показать "
-"фотографии в потрясающей детализации. Fotographia также является "
-"приемлемым, так что ваши читатели могут принять ваши рассказы, куда они "
-"идут без усилий от вас."
-
-#. Author of the plugin/theme
-msgid "Jacob Martella"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://www.jacobmartella.com/"
-msgstr ""
+#: template-parts/single/entry-header.php:16
+#, fuzzy
+msgid "Written By:"
+msgstr "Written By:"

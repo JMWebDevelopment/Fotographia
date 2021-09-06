@@ -1,0 +1,536 @@
+# Copyright (C) 2021 WP Rig
+# This file is distributed under the same license as the WP Rig package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Rig\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Report-Msgid-Bugs-To: WP Rig\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:44
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s komentarz do &ldquo;%2$s&rdquo;"
+msgstr[1] ""
+msgstr[2] ""
+
+#: comments.php:38
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Jedna odpowiedź na &ldquo;%1$s&rdquo;"
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr "Komentarze są wyłączone."
+
+#: header.php:36
+msgid "Skip to content"
+msgstr "Przejdź do treści"
+
+#: sidebar.php:20
+msgid "Asides"
+msgstr "Asides"
+
+#: sidebar.php:26, template-parts/single/entry-bio.php:27
+msgid "About "
+msgstr "O"
+
+#. translators: 1: required WP version number, 2: required PHP version number, 3: available WP version number, 4: available PHP version number
+#: inc/back-compat.php:25
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s and PHP version %2$s. You "
+"are running versions %3$s and %3$s respectively. Please update and try again."
+msgstr ""
+"WP Rig wymaga co najmniej WordPressa w wersji %1$s i PHP w wersji %2$s. Ty "
+"używasz wersji %3$s i %3$s odpowiednio. Proszę zaktualizować i spróbować "
+"ponownie."
+
+#. translators: 1: required WP version number, 2: available WP version number
+#: inc/back-compat.php:30
+#, fuzzy
+msgid ""
+"WP Rig requires at least WordPress version %1$s. You are running version "
+"%2$s. Please update and try again."
+msgstr ""
+"WP Rig wymaga co najmniej wersji WordPress %1$s. Używasz wersji %2$s. Proszę "
+"zaktualizować i spróbować ponownie."
+
+#. translators: 1: required PHP version number, 2: available PHP version number
+#: inc/back-compat.php:35
+#, fuzzy
+msgid ""
+"WP Rig requires at least PHP version %1$s. You are running version %2$s. "
+"Please update and try again."
+msgstr ""
+"WP Rig wymaga co najmniej PHP w wersji %1$s. Używasz wersji %2$s. Proszę "
+"zaktualizować i spróbować ponownie."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Template_Tags.php:54
+#, fuzzy
+msgid ""
+"The theme templating component %1$s does not implement the %2$s interface."
+msgstr "Komponent szablonu tematycznego %1$s nie implementuje interfejsu %2$s."
+
+#. translators: %s: template tag name
+#: inc/Template_Tags.php:81
+#, fuzzy
+msgid "The template tag %s does not exist."
+msgstr "Znacznik szablonu %s nie istnieje."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:110
+#, fuzzy
+msgid ""
+"The template tag method %1$s registered by theme component %2$s must either "
+"be a callable or an array."
+msgstr ""
+"Metoda tagu szablonu %1$s zarejestrowana przez komponent tematyczny %2$s "
+"musi być albo wywołaniem albo tablicą."
+
+#. translators: 1: template tag method name, 2: component class name
+#: inc/Template_Tags.php:121
+#, fuzzy
+msgid ""
+"The template tag method %1$s registered by theme component %2$s conflicts "
+"with an already registered template tag of the same name."
+msgstr ""
+"Metoda tagu szablonu %1$s zarejestrowana przez komponent tematyczny %2$s "
+"koliduje z już zarejestrowanym tagiem szablonu o tej samej nazwie."
+
+#. translators: 1: classname/type of the variable, 2: interface name
+#: inc/Theme.php:57
+#, fuzzy
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr "Komponent tematyczny %1$s nie implementuje interfejsu %2$s."
+
+#. translators: %s: slug
+#: inc/Theme.php:120
+#, fuzzy
+msgid "No theme component with the slug %s exists."
+msgstr "Nie istnieje komponent tematyczny o symbolu %s."
+
+#: inc/Accessibility/Component.php:69
+msgid "Expand child menu"
+msgstr "Rozwiń podmenu"
+
+#: inc/Accessibility/Component.php:70
+msgid "Collapse child menu"
+msgstr "Zwiń podmenu"
+
+#: inc/Comments/Component.php:149
+#, fuzzy
+msgid "New comment(s)"
+msgstr "Nowa(e) uwaga(e)"
+
+#: inc/Customizer/Component.php:53
+#, fuzzy
+msgid "Fotographia Settings"
+msgstr "Ustawienia Fotographia"
+
+#: inc/Customizer/Component.php:54
+#, fuzzy
+msgid "These are the Fotographia theme options."
+msgstr "To są opcje motywu Fotographia."
+
+#: inc/Customizer/Component.php:60
+msgid "Light"
+msgstr "Jasny"
+
+#: inc/Customizer/Component.php:61
+msgid "Dark"
+msgstr "Ciemny"
+
+#: inc/Customizer/Component.php:75
+msgid "Color Scheme"
+msgstr "Schemat kolorystyczny"
+
+#: inc/Customizer/Component.php:84
+msgid "None"
+msgstr "Brak"
+
+#: inc/Customizer/Component.php:101
+#, fuzzy
+msgid "Home Featured Category"
+msgstr "Strona główna Kategoria"
+
+#: inc/Customizer/Component.php:120
+#, fuzzy
+msgid "Number of Stories on the Homepage."
+msgstr "Liczba opowiadań na stronie głównej."
+
+#: inc/Customizer/Component.php:138
+#, fuzzy
+msgid "Display the Author's Bio"
+msgstr "Wyświetlaj Bio autora"
+
+#: inc/Customizer/Component.php:156
+msgid "Facebook Link"
+msgstr "Link do Facebooka"
+
+#: inc/Customizer/Component.php:174
+msgid "Twitter Link"
+msgstr "Twitter Link"
+
+#: inc/Customizer/Component.php:192
+#, fuzzy
+msgid "YouTube Link"
+msgstr "Link do YouTube"
+
+#: inc/Customizer/Component.php:210
+#, fuzzy
+msgid "Tumblr Link"
+msgstr "Tumblr Link"
+
+#: inc/Customizer/Component.php:228
+msgid "Instagram Link"
+msgstr "Link do Instagrama"
+
+#: inc/Customizer/Component.php:246
+#, fuzzy
+msgid "RSS Feed Link"
+msgstr "Link do kanału RSS"
+
+#: inc/Editor/Component.php:65
+msgid "Primary"
+msgstr "Podstawowy"
+
+#: inc/Editor/Component.php:70
+msgid "Secondary"
+msgstr "Drugorzędne"
+
+#: inc/Editor/Component.php:75
+msgid "Red"
+msgstr "Czerwony"
+
+#: inc/Editor/Component.php:80
+msgid "Green"
+msgstr "Zielony"
+
+#: inc/Editor/Component.php:85
+msgid "Blue"
+msgstr "Niebieski"
+
+#: inc/Editor/Component.php:90
+msgid "Yellow"
+msgstr "Żółty"
+
+#: inc/Editor/Component.php:95
+msgid "Black"
+msgstr "Czarny"
+
+#: inc/Editor/Component.php:100
+msgid "Grey"
+msgstr "Szary"
+
+#: inc/Editor/Component.php:105
+msgid "White"
+msgstr "Biały"
+
+#: inc/Editor/Component.php:110
+#, fuzzy
+msgid "Dusty daylight"
+msgstr "Zakurzone światło dzienne"
+
+#: inc/Editor/Component.php:115
+#, fuzzy
+msgid "Dusty sun"
+msgstr "Zakurzone słońce"
+
+#: inc/Editor/Component.php:132
+msgid "Small"
+msgstr "Mały"
+
+#: inc/Editor/Component.php:133
+msgid "S"
+msgstr "S"
+
+#: inc/Editor/Component.php:138
+msgid "Medium"
+msgstr "Średni"
+
+#: inc/Editor/Component.php:139
+msgid "M"
+msgstr "M"
+
+#: inc/Editor/Component.php:144
+msgid "Large"
+msgstr "Duży"
+
+#: inc/Editor/Component.php:145
+msgid "L"
+msgstr "L"
+
+#: inc/Editor/Component.php:150
+msgid "Larger"
+msgstr "Większe"
+
+#: inc/Editor/Component.php:151
+msgid "XL"
+msgstr "XL"
+
+#: inc/Nav_Menus/Component.php:68
+msgid "Main Navigation"
+msgstr "Główna nawigacja"
+
+#: inc/Sidebars/Component.php:69
+msgid "Sidebar"
+msgstr "Pasek boczny"
+
+#: inc/Sidebars/Component.php:71
+msgid "Add widgets here."
+msgstr "Dodaj widgety tutaj."
+
+#: inc/Social_Media/Component.php:62, inc/Social_Media/Component.php:74
+msgid "Facebook Profile"
+msgstr "Profil na Facebooku"
+
+#: inc/Social_Media/Component.php:65
+msgid "Twitter Profile"
+msgstr "Profil Twitter"
+
+#: inc/Social_Media/Component.php:68
+msgid "YouTube Channel"
+msgstr "YouTube"
+
+#: inc/Social_Media/Component.php:71
+msgid "Tumblr Blog"
+msgstr "Blog Tumblr"
+
+#: inc/Social_Media/Component.php:79, inc/Social_Media/Component.php:77
+msgid "RSS Feed"
+msgstr "Kanał RSS"
+
+#. translators: %s: stylesheet handle
+#: inc/Styles/Component.php:238
+#, fuzzy
+msgid "Invalid theme stylesheet handle: %s"
+msgstr "Nieprawidłowy uchwyt arkusza stylów motywu: %s"
+
+#: template-parts/content/entry-attachment.php:33,
+#: template-parts/content/entry.php:32
+msgid "Previous:"
+msgstr "Poprzedni:"
+
+#: template-parts/content/entry-attachment.php:43,
+#: template-parts/content/entry.php:33
+msgid "Next:"
+msgstr "Następny:"
+
+#: template-parts/content/entry-attachment.php:49
+msgid "Post navigation"
+msgstr "Nawigacja po wpisach"
+
+#. translators: %s: post title
+#: template-parts/content/entry_actions.php:21
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Zostaw komentarz <span class=\"screen-reader-text\"> w %s</span>"
+
+#. translators: %s: post title
+#: template-parts/content/entry_actions.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Edytuj <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content/entry_content.php:18
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Czytaj dalej<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content/entry_content.php:31
+msgid "Pages:"
+msgstr "Strony:"
+
+#. translators: %s: post date
+#: template-parts/content/entry_meta.php:63
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Opublikowano %s"
+
+#. translators: %s: post author
+#: template-parts/content/entry_meta.php:76
+msgctxt "post author"
+msgid "By %s"
+msgstr "Przez %s"
+
+#. translators: %s: post author
+#: template-parts/content/entry_meta.php:79
+msgctxt "post author"
+msgid "by %s"
+msgstr "przez %s"
+
+#. translators: %s: post parent title
+#: template-parts/content/entry_meta.php:95
+msgctxt "post parent"
+msgid "In %s"
+msgstr "za %s"
+
+#. translators: %s: post parent title
+#: template-parts/content/entry_meta.php:98
+msgctxt "post parent"
+msgid "in %s"
+msgstr "w %s"
+
+#. translators: separator between taxonomy terms
+#: template-parts/content/entry_taxonomies.php:24
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#. translators: %s: list of taxonomy terms
+#: template-parts/content/entry_taxonomies.php:31
+msgid "Posted in %s"
+msgstr "Opublikowany w %s"
+
+#. translators: %s: list of taxonomy terms
+#: template-parts/content/entry_taxonomies.php:37
+msgid "Tagged %s"
+msgstr "Tagged %s"
+
+#. translators: %s: taxonomy name
+#: template-parts/content/entry_taxonomies.php:44
+msgid "%s:"
+msgstr "%s:"
+
+#: template-parts/content/error-404.php:16
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Żadna strona nie znajduje się pod tym adresem. Sprawdź, czy wpisany adres "
+"jest poprawny lub skorzystaj z wyszukiwarki."
+
+#: template-parts/content/error-404.php:27
+msgid "Most Used Categories"
+msgstr "Najczęściej używane kategorie"
+
+#. translators: %1$s: smiley
+#: template-parts/content/error-404.php:45
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Spróbuj poszukać w miesięcznym archiwum %1$s"
+
+#: template-parts/content/error-500.php:14
+#, fuzzy
+msgid "Oops! Something went wrong."
+msgstr "Ups! Coś poszło nie tak."
+
+#: template-parts/content/error-offline.php:14
+#, fuzzy
+msgid "Oops! It looks like you&#8217;re offline."
+msgstr "Ups! Wygląda na to, że jesteś offline."
+
+#: template-parts/content/error.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Być może "
+"wyszukiwanie może pomóc."
+
+#: template-parts/content/error.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Przepraszamy, ale nic nie pasowało do wyszukiwanych haseł. Spróbuj ponownie, "
+"używając różnych słów kluczowych."
+
+#: template-parts/content/error.php:23
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Gotowy do opublikowania pierwszego posta? <a href=\"%1$s\">Zacznij tutaj</a>."
+
+#. translators: %s: search query
+#: template-parts/content/page_header.php:41
+msgid "Search Results for: %s"
+msgstr "Wyniki wyszukiwania dla: %s"
+
+#: template-parts/content/page_header.php:22
+msgid "Nothing Found"
+msgstr "Nic nie znaleziono"
+
+#: template-parts/content/page_header.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ups! Ta strona nie została znaleziona."
+
+#: template-parts/content/pagination.php:13
+msgctxt "previous set of search results"
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: template-parts/content/pagination.php:14
+msgctxt "next set of search results"
+msgid "Next"
+msgstr "Następny"
+
+#: template-parts/content/pagination.php:15
+msgid "Page navigation"
+msgstr "Nawigacja"
+
+#: template-parts/footer/info.php:25
+#, fuzzy
+msgid "Fotographia"
+msgstr "Fotographia"
+
+#: template-parts/header/navigation.php:16
+msgid "Main menu"
+msgstr "Menu główne"
+
+#: template-parts/header/navigation.php:39
+#, fuzzy
+msgid "Open menu"
+msgstr "Otwórz menu"
+
+#: template-parts/header/navigation.php:49
+msgid "Menu"
+msgstr "Menu"
+
+#: template-parts/not-found/entry-content.php:14
+#, fuzzy
+msgid ""
+"Please use the search bar below to search for the content you're looking for."
+msgstr ""
+"Proszę użyć poniższego paska wyszukiwania, aby wyszukać treść, której "
+"szukasz."
+
+#: template-parts/not-found/entry-header.php:13
+#, fuzzy
+msgid "404 - Article Not Found"
+msgstr "404 - Artykuł nie został znaleziony"
+
+#: template-parts/not-found/entry-header.php:14
+#, fuzzy
+msgid "The article you were looking for was not found."
+msgstr "Artykuł, którego szukasz nie został znaleziony."
+
+#: template-parts/single/entry-footer.php:13
+msgid "Tags:"
+msgstr "Tagi:"
+
+#: template-parts/single/entry-header.php:24
+#, fuzzy
+msgid "Written By: "
+msgstr "Written By"
+
+#: template-parts/single/entry-header.php:16
+#, fuzzy
+msgid "Written By:"
+msgstr "Written By:"

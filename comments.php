@@ -1,59 +1,67 @@
 <?php
 /**
-* Comments.php
-*
-* @package Fotographia
-* @author  Jacob Martella
-* @version  1.5
-*/
-?>
-<?php
-	if ( post_password_required() ) {
-		return;
-	}
-?>
+ * The template for displaying comments
+ *
+ * This is the template that displays the area of the page that contains both the current comments
+ * and the comment form.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package wp_rig
+ */
 
-<section id="comments" class="comments-area">
-	<?php // You can start editing here ?>
-	<?php if ( have_comments() ) : ?>
+namespace WP_Rig\WP_Rig;
+
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() ) {
+	return;
+}
+
+wp_rig()->print_styles( 'wp-rig-comments' );
+
+?>
+<div id="comments" class="comments-area">
+	<?php
+	// You can start editing here -- including this comment!
+	if ( have_comments() ) {
+		?>
 		<h2 class="comments-title">
 			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'fotographia' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
+			$comment_count = get_comments_number();
+			if ( 1 === $comment_count ) {
+				printf(
+					/* translators: 1: title. */
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wp-rig' ),
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
+			} else {
+				printf(
+					/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'wp-rig' ) ),
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					number_format_i18n( $comment_count ),
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				);
+			}
 			?>
-		</h2>
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'fotographia' ); ?></h2>
-			<div class="nav-links">
+		</h2><!-- .comments-title -->
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'fotographia' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'fotographia' ) ); ?></div>
+		<?php the_comments_navigation(); ?>
 
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // Check for comment navigation. ?>
-		<ol class="commentlist">
-			<?php wp_list_comments( 'type=comment&callback=fotographia_comments' ); ?>
-		</ol>
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'fotographia' ); ?></h2>
-			<div class="nav-links">
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'fotographia' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'fotographia' ) ); ?></div>
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // Check for comment navigation. ?>
-	<?php endif; // Check for have_comments(). ?>
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		<?php wp_rig()->the_comments(); ?>
+
+		<?php
+		if ( ! comments_open() ) {
+			?>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp-rig' ); ?></p>
+			<?php
+		}
+	}
+
+	comment_form();
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'fotographia' ); ?></p>
-	<?php endif; ?>
-	<?php comment_form( array( 'class_submit'=>'button' ) ); ?>
-</section><!-- #comments -->
+</div><!-- #comments -->

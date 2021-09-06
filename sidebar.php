@@ -1,30 +1,35 @@
 <?php
 /**
-* Sidebar.php
-*
-* @package Fotographia
-* @author  Jacob Martella
-* @version  1.5
-*/
+ * The sidebar containing the main widget area
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package wp_rig
+ */
+
+namespace WP_Rig\WP_Rig;
+
+if ( ! wp_rig()->is_primary_sidebar_active() ) {
+	return;
+}
+
+wp_rig()->print_styles( 'wp-rig-sidebar' );
+
 ?>
-<div id="sidebar1" class="sidebar large-4 medium-12 columns" role="complementary">
+<aside id="secondary" class="primary-sidebar widget-area">
+	<h2 class="screen-reader-text"><?php esc_attr_e( 'Asides', 'wp-rig' ); ?></h2>
 	<?php
-		if ( is_author() ) { ?>
-			<aside id="author-bio1" class="widget author-bio">
+		if ( is_author() ) {
+			?>
+			<aside id="author-bio1" class="widget author-bio clearfix">
 				<?php the_post(); ?>
-					<h4 class="widgettitle"><?php echo esc_html( __( 'About ', 'fotographia' ) . get_the_author_meta( 'display_name' ) ); ?></h4>
+					<h4 class="widgettitle"><?php echo esc_html__( 'About ', 'wp-rig' ) . get_the_author_meta( 'display_name' ); ?></h4>
 					<div class="mugshot"><?php echo get_avatar( esc_url( get_the_author_meta( 'email' ) ), $size = 96 ); ?></div>
 					<p class="bio"><?php echo get_the_author_meta( 'description' ); ?></p>
 				<?php rewind_posts(); ?>
 			</aside>
-		<?php }
+		<?php
+		}
 	?>
-	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
-		<?php dynamic_sidebar( 'sidebar1' ); ?>
-	<?php else : ?>
-	<!-- This content shows up if there are no widgets defined in the backend. -->	
-	<div class="alert help">
-		<p><?php _e( 'Please activate some Widgets.', 'fotographia' );  ?></p>
-	</div>
-	<?php endif; ?>
-</div>
+	<?php wp_rig()->display_primary_sidebar(); ?>
+</aside><!-- #secondary -->
