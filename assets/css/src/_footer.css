@@ -19,6 +19,24 @@
 		margin: 0;
 		max-width: none;
 
+		& .social-links {
+
+			& a {
+				display: inline-block;
+				margin-right: 15px;
+				color: var(--color-white);
+
+				&:hover,
+				&:focus {
+					color: var(--color-light-grey);
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
 		& p {
 			@mixin latoFont 16px, var(--color-white), 400, none;
 			color: var(--color-white);

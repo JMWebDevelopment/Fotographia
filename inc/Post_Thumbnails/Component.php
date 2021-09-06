@@ -8,6 +8,7 @@
 namespace WP_Rig\WP_Rig\Post_Thumbnails;
 
 use WP_Rig\WP_Rig\Component_Interface;
+use function WP_Rig\WP_Rig\wp_rig;
 use function add_action;
 use function add_theme_support;
 use function add_image_size;
@@ -34,6 +35,7 @@ class Component implements Component_Interface {
 	public function initialize() {
 		add_action( 'after_setup_theme', array( $this, 'action_add_post_thumbnail_support' ) );
 		add_action( 'after_setup_theme', array( $this, 'action_add_image_sizes' ) );
+		add_action( 'wp_enqueue_scripts', [ $this, 'action_enqueue_fex_video_script' ] );
 	}
 
 	/**
@@ -51,5 +53,23 @@ class Component implements Component_Interface {
 		add_image_size( 'fotographia-home', 2000, 1500, true );
 		add_image_size( 'fotographia-archive', 2000, 1500, true );
 		add_image_size( 'fotographia-single', 5000, 3333, true );
+	}
+
+	/**
+	 * Loads the script for adding the flex-video class to videos.
+	 *
+	 * @since 2.0
+	 */
+	public function action_enqueue_fex_video_script() {
+		wp_enqueue_script(
+			'wp-rig-flex-video',
+			get_theme_file_uri( '/assets/js/flex-video.min.js' ),
+			[ 'jquery' ],
+			wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/flex-video.min.js' ) ),
+			false
+		);
+		wp_script_add_data( 'wp-rig-flex-video', 'async', true );
+		wp_script_add_data( 'wp-rig-flex-video', 'precache', true );
+
 	}
 }

@@ -228,6 +228,24 @@
 	}
 }
 
+.page-content > .alignwide,
+.entry-content > .alignwide,
+.entry-summary > .alignwide {
+	margin-left: calc(25% - 25vw);
+	margin-right: calc(25% - 25vw);
+	max-width: 1000%;
+	width: auto;
+}
+
+.page-content > .alignfull,
+.entry-content > .alignfull,
+.entry-summary > .alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	max-width: 1000%;
+	width: auto;
+}
+
 /*--------------------------------------------------------------
 ## Custom block colors.
 --------------------------------------------------------------*/
@@ -338,4 +356,9 @@
 
 .has-larger-font-size {
 	font-size: var(--font-size-larger);
+}
+
+figcaption,
+.wp-block-image figcaption {
+	color: var(--color-off-black);
 }

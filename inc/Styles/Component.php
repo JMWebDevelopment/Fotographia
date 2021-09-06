@@ -89,7 +89,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 */
 	public function template_tags() : array {
 		return array(
-			'print_styles' => array( $this, 'print_styles' ),
+			'print_styles'     => array( $this, 'print_styles' ),
+			'load_dark_styles' => array( $this, 'load_dark_styles' ),
 		);
 	}
 
@@ -258,7 +259,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @return bool True if preloading stylesheets and injecting them is enabled, false otherwise.
 	 */
 	protected function preloading_styles_enabled() {
-		$preloading_styles_enabled = ! wp_rig()->is_amp();
+		$preloading_styles_enabled = true;
 
 		/**
 		 * Filters whether to preload stylesheets and inject their link tags within the page content.
@@ -331,6 +332,12 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					return 'page.php' === basename( $template ) || is_404();
 				},
 			),
+			'wp-rig-dark'     => [
+				'file'             => 'dark.min.css',
+				'preload_callback' => function() {
+					return 'dark' === get_theme_mod( 'fotographia-color-scheme' );
+				},
+			],
 		);
 
 		/**
@@ -427,5 +434,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		);
 
 		return add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	public function load_dark_styles() {
+		if ( 'dark' === get_theme_mod( 'fotographia-color-scheme' ) ) {
+			wp_rig()->print_styles( 'wp-rig-dark' );
+		}
 	}
 }

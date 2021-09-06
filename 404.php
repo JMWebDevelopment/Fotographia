@@ -11,6 +11,7 @@ get_header();
 
 wp_rig()->print_styles( 'wp-rig-content' );
 wp_rig()->print_styles( 'wp-rig-page' );
+wp_rig()->load_dark_styles();
 
 ?>
 	<main id="primary" class="site-main">

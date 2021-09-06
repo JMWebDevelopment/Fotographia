@@ -28,8 +28,8 @@ namespace WP_Rig\WP_Rig;
 </div>
 <?php
 $show_bio = esc_attr( get_theme_mod( 'fotographia-author-bio' ) );
-if ( 1 === $show_bio ) {
-	echo wp_kses_post( fotographia_author_bio() );
+if ( '1' === $show_bio ) {
+	get_template_part( 'template-parts/single/entry', 'bio' );
 }
 ?>
 <?php comments_template(); ?>

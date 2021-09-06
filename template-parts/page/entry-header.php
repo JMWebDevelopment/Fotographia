@@ -12,16 +12,14 @@ if ( has_post_thumbnail() ) {
 	<div class="featured-photo">
 		<?php the_post_thumbnail( 'fotographia-single' ); ?>
 		<span class="article-header">
-			<h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
-			<p class="entry-meta"><?php esc_html_e( 'Written By:', 'wp-rig' ); ?> <?php the_author_posts_link(); ?> &bull; <?php the_date( get_option( 'date_format' ) ); ?></p>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</span>
 	</div>
 	<?php
 } else {
 	?>
 	<div class="single-header">
-		<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-		<p class="single-meta"><?php esc_html_e( 'Written By: ', 'wp-rig' ); ?> <?php the_author_posts_link(); ?> &bull; <?php the_date( get_option( 'date_format' ) ); ?></p>
+		<h1 class="single-title"><?php the_title(); ?></h1>
 	</div>
 	<?php
 }

@@ -140,8 +140,6 @@ class Theme {
 			new Editor\Component(),
 			new Accessibility\Component(),
 			new Image_Sizes\Component(),
-			new AMP\Component(),
-			new PWA\Component(),
 			new Comments\Component(),
 			new Nav_Menus\Component(),
 			new Sidebars\Component(),
@@ -152,11 +150,8 @@ class Theme {
 			new Customizer\Component(),
 			new Styles\Component(),
 			new Home\Component(),
+			new Social_Media\Component(),
 		);
-
-		if ( defined( 'JETPACK__VERSION' ) ) {
-			$components[] = new Jetpack\Component();
-		}
 
 		return $components;
 	}

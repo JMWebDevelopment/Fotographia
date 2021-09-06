@@ -55,6 +55,28 @@
 			color: #fff;
 		}
 
+		&.author-bio {
+
+			& .mugshot {
+				float: left;
+				position: relative;
+				width: 96px;
+				height: 96px;
+				margin-right: 5px;
+				margin-top: 5px;
+
+				& img {
+					border-radius: 96px;
+				}
+			}
+
+			& .bio {
+				font-family: Lato;
+				font-size: 14px;
+				font-weight: 300;
+			}
+		}
+
 		& .tagcloud a {
 			font-size: 16px !important;
 			font-family: 'Lato', sans-serif;

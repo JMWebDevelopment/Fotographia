@@ -2,8 +2,12 @@
   "theme": {
     "slug": "fotographia",
     "name": "Fotographia",
-    "author": "Jacob Martella",
-    "PHPNamespace": "JM_Web_Development\\Fotographia"
+    "author": "Jacob Martella Web Development",
+    "PHPNamespace": "JM_Web_Development\\Fotographia",
+    "underscoreCase": "fotographia",
+    "constant": "FOTOGRAPHIA",
+    "camelCase": "Fotographia",
+    "camelCaseVar": "fotographia"
   },
   "dev": {
     "browserSync": {

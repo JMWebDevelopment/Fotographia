@@ -124,6 +124,10 @@ const paths = {
 		],
 		dest: `${ rootPath }/languages/${ nameFieldDefaults.slug }.pot`,
 	},
+	webfonts: {
+		src: `${ assetsDir }/webfonts/*.{eot,svg,ttf,woff,woff2}`,
+		dest: `${ assetsDir }/webfonts/`,
+	},
 };
 
 // Add rootPath to filesToCopy and additionalFilesToCopy
@@ -142,6 +146,7 @@ if ( isProd ) {
 	paths.styles.editorDest = `${ prodAssetsDir }/css/editor/`;
 	paths.scripts.dest = `${ prodAssetsDir }/js/`;
 	paths.images.dest = `${ prodAssetsDir }/images/`;
+	paths.webfonts.dest = `${ prodAssetsDir }/webfonts/`;
 	paths.languages = {
 		src: `${ prodThemePath }/**/*.php`,
 		dest: `${ prodThemePath }/languages/${ config.theme.slug }.pot`,

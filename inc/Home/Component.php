@@ -81,7 +81,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	public function story_slideshow() {
 		$media = get_attached_media( 'image', get_the_ID() );
 		foreach ( $media as $image ) {
-			echo '<img src="' . esc_url( $image->guid ) . '" />';
+			echo '<img src="' . esc_url( $image->guid ) . '" alt="' . esc_attr( get_post_meta( $image->ID, '_wp_attachment_image_alt', true ) ) . '" />';
 		}
 	}
 

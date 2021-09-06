@@ -102,11 +102,6 @@
 
 			& .entry-content {
 
-				&  > * {
-					max-width: 75rem;
-					margin: 0 auto;
-				}
-
 				& p {
 
 					&:first-child::first-letter {
@@ -152,19 +147,6 @@
 						content: "\201C";
 						display: block;
 						opacity: 0.4;
-					}
-				}
-
-				& .alignnone {
-					width: 150% !important;
-					margin: 0 0 0 -25%;
-					position: relative;
-					display: block;
-					max-width: none;
-
-					& .wp-caption-text {
-						width: 60%;
-						margin: auto;
 					}
 				}
 			}
@@ -236,6 +218,7 @@
 				& .title {
 					font-size: 28px;
 					font-weight: 300;
+					clear: right;
 				}
 			}
 		}
