@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+- Removed references to AMP functions.
+- Tested with WordPress 5.8.1
+
 ## 2.0
 - Redeveloped the theme using WP Rig as a starter theme.
 - Tested with WordPress 5.7.2.
