@@ -57,25 +57,28 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	public function action_enqueue_scripts() {
-		wp_enqueue_script(
-			'wp-rig-cycle',
-			get_theme_file_uri( '/assets/js/cycle.min.js' ),
-			array(),
-			wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/cycle.min.js' ) ),
-			false
-		);
-		wp_script_add_data( 'wp-rig-cycle', 'async', true );
-		wp_script_add_data( 'wp-rig-cycle', 'precache', true );
 
-		wp_enqueue_script(
-			'wp-rig-show-hide',
-			get_theme_file_uri( '/assets/js/show-hide.min.js' ),
-			array(),
-			wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/show-hide.min.js' ) ),
-			false
-		);
-		wp_script_add_data( 'wp-rig-show-hide', 'async', true );
-		wp_script_add_data( 'wp-rig-show-hide', 'precache', true );
+		if ( is_front_page() || is_archive() ) {
+			wp_enqueue_script(
+				'wp-rig-cycle',
+				get_theme_file_uri( '/assets/js/cycle.min.js' ),
+				array(),
+				wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/cycle.min.js' ) ),
+				false
+			);
+			wp_script_add_data( 'wp-rig-cycle', 'async', true );
+			wp_script_add_data( 'wp-rig-cycle', 'precache', true );
+
+			wp_enqueue_script(
+				'wp-rig-show-hide',
+				get_theme_file_uri( '/assets/js/show-hide.min.js' ),
+				array(),
+				wp_rig()->get_asset_version( get_theme_file_path( '/assets/js/show-hide.min.js' ) ),
+				false
+			);
+			wp_script_add_data( 'wp-rig-show-hide', 'async', true );
+			wp_script_add_data( 'wp-rig-show-hide', 'precache', true );
+		}
 	}
 
 	public function story_slideshow() {
